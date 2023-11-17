@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\dell\Desktop\Projetos Vscod\Java_T2_TIC18\Semana1\.metadata\.plugins\org.eclipse.jdt.core
+1425467046.index
+2999163348.index
+1865797976.index

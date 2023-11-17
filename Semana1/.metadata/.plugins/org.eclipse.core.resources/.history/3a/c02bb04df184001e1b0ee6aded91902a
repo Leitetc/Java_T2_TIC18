@@ -1,0 +1,78 @@
+package calculadora;
+import java.util.Scanner;
+
+public class CalculadoraSimples {
+
+	
+	public static void result(double number1, double number2) {
+		double result = 0;
+		char option;
+		
+		Scanner Ler = new Scanner(System.in);
+		
+		do {
+			System.out.println("Opção 1: +");
+			System.out.println("Opção 2: -");
+			System.out.println("Opção 3: *");
+			System.out.println("Opção 4: /");
+			System.out.println("Opção 5: 0");
+			
+			System.out.println("Escolha uma operador matemático para calcular os números ou digite 0 para sair: ");
+			option = Ler.next().charAt(0);
+		
+			
+			switch(option) {
+				case '+':
+					 result = sum(number1, number2);
+					 System.out.println("A soma entre " + number1 + " e " + number2 + " é: " + result);
+				break;
+				
+				case '-':
+					result = subtract(number1, number2);
+					System.out.println("A subtracao entre " + number1 + " e " + number2 + " é: " + result);
+				break;
+				
+				case '*':
+					result = multiply(number1, number2);
+					System.out.println("A multiplicação entre " + number1 + " e " + number2 + " é: " + result);
+				break;
+				
+				case '/':
+					result = divide(number1, number2);
+					System.out.println("A divisão entre " + number1 + " e " + number2 + " é: " + result);
+				break;
+				
+				case '0':
+					System.out.println("Programa finalizado.");
+				break;
+				default:
+					System.out.println("Opção inválida");
+				break;
+			}
+		}while(option != '0');
+		Ler.close();
+	}
+
+	private static double divide(double number1, double number2) {
+		return 0;
+	}
+
+	private static double multiply(double number1, double number2) {
+		return 0;
+	}
+
+	private static double subtract(double number1, double number2) {
+		return 0;
+	}
+
+	private static double sum(double number1, double number2) {
+		return 0;
+	}
+
+	public static void result1(double number1, double number2) {
+		
+	}
+}
+	
+	
+

@@ -1,0 +1,77 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraSimples {
+
+	public void result(double number1, double number2) {
+        double result;
+        char option;
+
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.println("Opção 1: +");
+            System.out.println("Opção 2: -");
+            System.out.println("Opção 3: *");
+            System.out.println("Opção 4: /");
+            System.out.println("Opção 0: Sair");
+
+            System.out.println("Escolha uma operação matemática para calcular os números ou digite 0 para sair: ");
+            option = scanner.next().charAt(0);
+
+            switch (option) {
+                case '+':
+                    result = sum(number1, number2);
+                    System.out.println("A soma entre " + number1 + " e " + number2 + " é: " + result);
+                    break;
+
+                case '-':
+                    result = subtract(number1, number2);
+                    System.out.println("A subtração entre " + number1 + " e " + number2 + " é: " + result);
+                    break;
+
+                case '*':
+                    result = multiply(number1, number2);
+                    System.out.println("A multiplicação entre " + number1 + " e " + number2 + " é: " + result);
+                    break;
+
+                case '/':
+                    result = divide(number1, number2);
+                    System.out.println("A divisão entre " + number1 + " e " + number2 + " é: " + result);
+                    break;
+
+                case '0':
+                    System.out.println("Programa finalizado.");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida");
+                    break;
+            }
+        } while (option != '0');
+
+        scanner.close();
+    }
+
+    private double divide(double number1, double number2) {
+        if (number2 != 0) {
+            return number1 / number2;
+        } else {
+            System.out.println("Erro: divisão por zero.");
+            return 0;
+        }
+    }
+
+    private double multiply(double number1, double number2) {
+        return number1 * number2;
+    }
+
+    private double subtract(double number1, double number2) {
+        return number1 - number2;
+    }
+
+    private double sum(double number1, double number2) {
+        return number1 + number2;
+    }
+}

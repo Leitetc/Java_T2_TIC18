@@ -1,0 +1,40 @@
+package conversor;
+import java.util.Scanner;
+
+public class ConversordeTemperatura {
+	
+	public void executarConversao() {
+        Scanner Ler = new Scanner(System.in);
+
+        System.out.println("Escolha a operação:");
+        System.out.println("1. Celsius para Fahrenheit");
+        System.out.println("2. Fahrenheit para Celsius");
+
+        int escolha = Ler.nextInt();
+
+        if (escolha == 1) {
+            System.out.println("Digite a temperatura em Celsius:");
+            double temperaturaCelsius = Ler.nextDouble();
+            double temperaturaFahrenheit = celsiusParaFahrenheit(temperaturaCelsius);
+            System.out.println("A temperatura em Fahrenheit é: " + temperaturaFahrenheit);
+        } else if (escolha == 2) {
+            System.out.println("Digite a temperatura em Fahrenheit:");
+            double temperaturaFahrenheit = Ler.nextDouble();
+            double temperaturaCelsius = fahrenheitParaCelsius(temperaturaFahrenheit);
+            System.out.println("A temperatura em Celsius é: " + temperaturaCelsius);
+        } else {
+            System.out.println("Escolha inválida. Por favor, execute o programa novamente e escolha 1 ou 2.");
+        }
+
+        Ler.close();
+    }
+
+    private double celsiusParaFahrenheit(double temperaturaCelsius) {
+        return (temperaturaCelsius * 9/5) + 32;
+    }
+
+    private double fahrenheitParaCelsius(double temperaturaFahrenheit) {
+        return (temperaturaFahrenheit - 32) * 5/9;
+    }
+
+}
